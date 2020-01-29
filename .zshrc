@@ -1,3 +1,10 @@
+## NVM (requires antigen)
+export NVM_AUTO_USE=true
+
+. $HOME/.zsh-dotfiles/antigen.zsh
+antigen bundle lukechilds/zsh-nvm
+antigen apply
+
 # Load version control information
 autoload -Uz vcs_info
 
@@ -10,7 +17,7 @@ autoload -U colors && colors
 COLOR1='blue'
 COLOR2='magenta'
 
-DIRECTORY=$'%K{$COLOR1}%F{black} \uf413 %(3~|\u2026/%2~|%~) %F{$COLOR1}'
+DIRECTORY=$'%F{$COLOR1}\ue0c5%K{$COLOR1}%F{black} \uf413 %(3~|\u2026/%2~|%~) %F{$COLOR1}'
 
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git:*' formats $'%K{$COLOR2}\ue0c8%F{black} \ue725 %b %F{$COLOR2}'
